@@ -41,7 +41,7 @@ VALUES (1, 1, '10', '2', '121');
 CREATE TABLE cr_person(
     person_id SERIAL,
     sur_name varchar(100) not null,
-    give_name varchar(100) not null,
+    given_name varchar(100) not null,
     patronymic varchar(100) not null,
     date_of_birth date not null,
     passport_seria varchar(10),
@@ -52,19 +52,19 @@ CREATE TABLE cr_person(
     PRIMARY KEY (person_id)
 );
 
-INSERT INTO cr_person (sur_name, give_name, patronymic, date_of_birth,
+INSERT INTO cr_person (sur_name, given_name, patronymic, date_of_birth,
 passport_seria, passport_number, passport_date, certificate_number, certificate_date)
 VALUES ('Васильев', 'Павел', 'Николаевич', '1995-03-18', '1234', '123456', '2015-04-11', null, null);
 
-INSERT INTO cr_person (sur_name, give_name, patronymic, date_of_birth,
+INSERT INTO cr_person (sur_name, given_name, patronymic, date_of_birth,
 passport_seria, passport_number, passport_date, certificate_number, certificate_date)
 VALUES ('Васильева', 'Ирина', 'Петровна', '1997-08-21', '4321', '654321', '2017-09-19', null, null);
 
-INSERT INTO cr_person (sur_name, give_name, patronymic, date_of_birth,
+INSERT INTO cr_person (sur_name, given_name, patronymic, date_of_birth,
 passport_seria, passport_number, passport_date, certificate_number, certificate_date)
 VALUES ('Васильева', 'Евгения', 'Павловна', '2016-01-11', null, null, null, '456123', '2016-01-21');
 
-INSERT INTO cr_person (sur_name, give_name, patronymic, date_of_birth,
+INSERT INTO cr_person (sur_name, given_name, patronymic, date_of_birth,
 passport_seria, passport_number, passport_date, certificate_number, certificate_date)
 VALUES ('Васильев', 'Александр', 'Павлович', '2018-10-24', null, null, null, '321654', '2018-11-09');
 
