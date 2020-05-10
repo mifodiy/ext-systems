@@ -19,6 +19,15 @@ public class PersonCheckDao
                     "upper(p.patronymic COLLATE \"en_US.UTF-8\") = upper(? COLLATE \"en_US.UTF-8\") and  " +
                     "p.date_of_birth = ? and a.street_code = ? and " +
                     "upper(a.building COLLATE \"en_US.UTF-8\") = upper(? COLLATE \"en_US.UTF-8\") and  ";
+
+    public PersonCheckDao() {
+        try{
+            Class.forName("org.postgresql.Driver");
+        } catch (Exception ex){
+            ex.printStackTrace();
+        }
+    }
+
     public PersonResponse checkPerson(PersonRequest request) throws PersonCheckException {
         PersonResponse response = new PersonResponse();
 
