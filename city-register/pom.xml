@@ -30,6 +30,7 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <outputDirectory>/Users/user/java/apache-tomcat-9.0.34/webapps</outputDirectory>
                 </configuration>
             </plugin>
         </plugins>
