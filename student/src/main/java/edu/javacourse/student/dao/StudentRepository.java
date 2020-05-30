@@ -10,9 +10,9 @@ import java.util.List;
 
 public interface StudentRepository extends JpaRepository<Student, Long>
 {
-    @Query("SELECT st FROM Student st WHERE st.lastName = :lastName AND" +
+    @Query("SELECT st FROM Student st WHERE st.lastName = :lastName AND " +
             "st.firstName = :firstName AND st.middleName = :middleName AND " +
-            "st.dateOfBirth = :dateOfBirth AND st.passportSeria = :passportSeria AND" +
+            "st.dateOfBirth = :dateOfBirth AND st.passportSeria = :passportSeria AND " +
             "st.passportNumber = :passportNumber AND st.passportDate = :passportDate")
     List<Student> findStudent(@Param("lastName")String lastName,
                               @Param("firstName")String firstName,
@@ -20,5 +20,5 @@ public interface StudentRepository extends JpaRepository<Student, Long>
                               @Param("dateOfBirth")LocalDate dateOfBirth,
                               @Param("passportSeria")String passportSeria,
                               @Param("passportNumber")String passportNumber,
-                              @Param("passpoortDate")LocalDate passportDate);
+                              @Param("passportDate")LocalDate passportDate);
 }
